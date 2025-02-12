@@ -69,6 +69,11 @@ a {
 .games-box {
     height: 1470px;
     background: rgb(32, 32, 39);
+    background-image: url(img/star4.svg);
+    background-image: url(img/star5.svg);
+   
+    background-repeat: no-repeat;
+    background-position: 25px 770px, 40px 822px; 
 }
 
 .text-box {
@@ -107,6 +112,11 @@ a {
         border-radius: 30px;
         box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
         background: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+
+    &__game1-3:hover {
+        transform: scale(1.05);
     }
 
     &__game2-5 {
@@ -114,6 +124,11 @@ a {
         border-radius: 30px;
         box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
         background: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+
+    &__game2-5:hover {
+        transform: scale(1.05);
     }
 
     &__game4-6 {
@@ -121,6 +136,11 @@ a {
         border-radius: 30px;
         box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
         background: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+
+    &__game4-6:hover {
+        transform: scale(1.05);
     }
 
     &__img {
