@@ -65,10 +65,9 @@ a {
 .games-box {
   height: 1470px;
   background: rgb(32, 32, 39);
-  background-image: url(img/star4.svg);
-  background-image: url(img/star5.svg);
+  background-image: url(img/star4.svg), url(img/star5.svg), url(img/star3.svg);
   background-repeat: no-repeat;
-  background-position: 25px 770px, 40px 822px;
+  background-position: 25px 770px, 40px 822px, 933px 77px;
 }
 
 .text-box__title {
