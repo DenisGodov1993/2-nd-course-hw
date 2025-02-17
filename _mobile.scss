@@ -3,4 +3,62 @@
         padding-left: 16px;
         padding-right: 16px;
     }
+
+    .top {
+        height: 700px;
+        background-image: url(img/stars1.svg), url(img/stars2.svg), url(img/star-mobale.svg);
+        background-repeat: no-repeat;
+        background-position: 37px 64px, 272px 557px, 187px -103px; 
+    }
+
+    .header {
+        display: none;
+    }
+
+    .header-mob {
+        padding-top: 147px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    
+        &__title {
+            color: rgb(32, 32, 39);
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 49px;
+            padding-bottom: 24px;
+            text-align: center;
+        }
+        
+        &__text {
+            color: rgb(32, 32, 39);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            padding-bottom: 36px;
+            text-align: center;
+        }
+        
+        &__btn {
+            box-sizing: border-box;
+            border: 1px solid rgb(32, 32, 39);
+            border-radius: 60px;
+            background: rgb(32, 32, 39);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 34px;
+            width: 285px;
+            height: 55px;
+            font-family: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .games-box {
+        display: none;
+    }
 }
