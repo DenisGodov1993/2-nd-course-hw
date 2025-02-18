@@ -66,6 +66,10 @@ a {
     }
 }
 
+.header-mob {
+    display: none;
+}
+
 .games-box {
     height: 1470px;
     background: rgb(32, 32, 39);
@@ -175,3 +179,5 @@ a {
         padding-top: 60px;
     }
 }
+
+@import 'mobile';
