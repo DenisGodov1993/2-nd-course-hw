@@ -24,29 +24,11 @@ a {
     background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), 100% 0;
     
     &__animation {
-        width: 3220px;
         box-sizing: border-box;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(50px);
         background: rgb(188, 236, 48);
-        margin: 154px -30px;
+        margin: 156px -30px;
         overflow: hidden;
-        animation-duration: 8s;
-        animation-name: slidein;
-
-        @keyframes slidein {
-            
-            from {
-              margin-left: 100%;
-              width: 500%;
-            }
-          
-            to {
-              margin-left: 0%;
-              width: 100%;
-            }
-        }
-    }  
+    }
 }
 
 .header {
@@ -140,7 +122,6 @@ a {
         box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
         background: rgb(255, 255, 255);
         overflow: hidden;
-        width: 100%;
         
         &_1-3 {
             max-height: 473px;
@@ -157,6 +138,10 @@ a {
 
     &__game:hover {
         transform: scale(1.05);
+    }
+
+    &__img {
+        width: 100%;
     }
 }
 
@@ -215,7 +200,6 @@ a {
     box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
     background: rgb(255, 255, 255);
     display: flex;
-    justify-content: space-between;
 
     &__img {
         border-radius: 30px;
@@ -225,6 +209,7 @@ a {
 .product {
     margin: 48px;
     border-radius: 30px;
+    width: 600px;
 
     &__text-1 {
         color: rgb(32, 32, 39);
@@ -282,20 +267,4 @@ a {
 @import 'mobile';
 
  /*
- overflow: hidden;
-        animation-duration: 3s;
-        animation-name: slidein;
-
-        @keyframes slidein {
-            
-            from {
-              margin-left: 100%;
-              width: 300%;
-            }
-          
-            to {
-              margin-left: 0%;
-              width: 100%;
-            }
-        }
 */
