@@ -23,6 +23,28 @@ a {
   background-repeat: no-repeat;
   background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), 100% 0;
 }
+.top__animation {
+  width: 3220px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background: rgb(188, 236, 48);
+  margin: 154px -30px;
+  overflow: hidden;
+  animation-duration: 8s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 500%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 
 .header {
   padding-top: 196px;
@@ -178,9 +200,13 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.mini-game__img {
+  border-radius: 30px;
+}
 
 .product {
   margin: 48px;
+  border-radius: 30px;
 }
 .product__text-1 {
   color: rgb(32, 32, 39);
@@ -286,4 +312,22 @@ a {
   .games-box {
     display: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*
+ overflow: hidden;
+        animation-duration: 3s;
+        animation-name: slidein;
+
+        @keyframes slidein {
+
+            from {
+              margin-left: 100%;
+              width: 300%;
+            }
+
+            to {
+              margin-left: 0%;
+              width: 100%;
+            }
+        }
+*//*# sourceMappingURL=style.css.map */
