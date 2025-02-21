@@ -22,12 +22,13 @@ a {
     background-image: url(img/stars1.svg), url(img/stars2.svg), url(img/star-big.svg);
     background-repeat: no-repeat;
     background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), 100% 0;
-    
-    &__animation {
-        box-sizing: border-box;
-        background: rgb(188, 236, 48);
-        margin: 156px -30px;
-    }
+}
+
+.animation {
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    background: rgb(188, 236, 48);
 }
 
 .header {

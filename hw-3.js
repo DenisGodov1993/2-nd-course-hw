@@ -160,22 +160,22 @@
 // указать 2015 год.
 // Вложенность больше двух этажей не допускается (условный оператор внутри условного оператора).
 
-let clientOS; 
-let clientDeviceYear; 
-clientOS = Number(prompt('Введите 0, если используете iOS, или 1, если используете Android'));
-clientDeviceYear = Number(prompt('Укажите год выпуска вашего устройства'));
-if (clientOS === 0) {
-    if (clientDeviceYear < 2015) {
-        alert('Установите облегчённую версию приложения для iOS по ссылке');
-    } else {
-        alert('Установите версию приложения для iOS по ссылке');
-    }
-} else if (clientOS === 1) {
-    if (clientDeviceYear < 2015) {
-        alert('Установите облегчённую версию приложения для Android по ссылке');
-    } else {
-        alert('Установите версию приложения для Android по ссылке');
-    }
-} else {
-    alert('Некорректный ввод! Попробуйте ещё раз.');
-}
+// let clientOS; 
+// let clientDeviceYear; 
+// clientOS = Number(prompt('Введите 0, если используете iOS, или 1, если используете Android'));
+// clientDeviceYear = Number(prompt('Укажите год выпуска вашего устройства'));
+// if (clientOS === 0) {
+//     if (clientDeviceYear < 2015) {
+//         alert('Установите облегчённую версию приложения для iOS по ссылке');
+//     } else {
+//         alert('Установите версию приложения для iOS по ссылке');
+//     }
+// } else if (clientOS === 1) {
+//     if (clientDeviceYear < 2015) {
+//         alert('Установите облегчённую версию приложения для Android по ссылке');
+//     } else {
+//         alert('Установите версию приложения для Android по ссылке');
+//     }
+// } else {
+//     alert('Некорректный ввод! Попробуйте ещё раз.');
+// }
