@@ -116,6 +116,7 @@ a {
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
   background: rgb(255, 255, 255);
   overflow: hidden;
+  transition: 0.7s;
 }
 .about__game_1-3 {
   max-height: 473px;
@@ -128,6 +129,7 @@ a {
 }
 .about__game:hover {
   transform: scale(1.05);
+  transition: 0.7s;
 }
 .about__img {
   width: 100%;
@@ -186,31 +188,28 @@ a {
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   background: rgb(255, 255, 255);
   display: flex;
+  justify-content: space-between;
 }
-.mini-game__img {
-  border-radius: 30px;
-}
-
-.product {
+.mini-game__text {
   margin: 48px;
   border-radius: 30px;
   width: 600px;
 }
-.product__text-1 {
+.mini-game__text_1 {
   color: rgb(32, 32, 39);
   font-size: 48px;
   font-weight: 700;
   line-height: 59px;
   padding-bottom: 24px;
 }
-.product__text-2 {
+.mini-game__text_2 {
   color: rgb(32, 32, 39);
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
   padding-bottom: 36px;
 }
-.product__btn {
+.mini-game__text_btn {
   box-sizing: border-box;
   border: 1px solid rgb(32, 32, 39);
   border-radius: 60px;
@@ -227,9 +226,12 @@ a {
   align-items: center;
   cursor: pointer;
 }
-.product__btn:hover {
+.mini-game__text_btn:hover {
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+}
+.mini-game__img {
+  border-radius: 30px;
 }
 
 .footer {

@@ -195,10 +195,10 @@ function guessNumber() {
         attempts++;
 
         if (userNumber === null) {
-            alert('Игра завершена! Попробуйте снова.');
-            break;
+            console.log(userNumber);
+            alert('Игра завершeна! Попробуйте снова.'); 
+            break; //я не знаю почему эта часть не работает(((
         } 
-        // я не знаю почему эта часть не работает(((
       
         if (randomNumber === userNumber) {
             alert(`Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток. Игра завершена!`);
