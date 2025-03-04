@@ -62,47 +62,95 @@
         display: none;
     }
 
-    .product-box {
+    .mini-games-box {
         height: 3740px;
-        background: rgb(32, 32, 39);
-        padding-bottom: 49px;
+        padding-top: 48px;
     }
 
-    .text-mini-games {
+    .text-mini-games {    
         font-size: 40px;
-        line-height: 48px;
+        line-height: 49px;
         padding-bottom: 48px;
     }
 
-    .mini-game {
-        box-shadow: 0px 11.44px 38.34px -6.87px rgba(0, 0, 0, 0.13);
-        flex-direction: column;
+    .mini-games {
+        display: none;
+    } 
+
+    .mini-games-mob {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
     }
 
-    .product {
-        margin: 29px 29px 33px 29px;
-        border-radius: 27.22px;
-        width: 285px;
+    .mini-game-mob {
+        grid-column: span 4;
+        border-radius: 30px;
+        box-shadow: 0px 11.44px 38.34px -6.87px rgba(0, 0, 0, 0.13);
+        background: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
 
-        &__text-1 {
-            font-size: 32px;
-            line-height: 39px;
-            padding-bottom: 16px;
-            text-align: center;
+        &__img {
+            border-radius: 30px;
         }
 
-        &__text-2 {
+        &__text-box {
+            padding: 29px 29px 33px 29px;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 27.22px;
+        }
+    
+        &__text {
+    
+            &_1 {
+                color: rgb(32, 32, 39);
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 39px;
+                padding-bottom: 16px;
+            }
+    
+            &_2 {
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                padding-bottom: 32px;
+            }
+    
+            &_btn {
+                box-sizing: border-box;
+                border: 1px solid rgb(32, 32, 39);
+                border-radius: 60px;
+                background: rgb(32, 32, 39);
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 141.69%;
+                text-align: center;
+                width: 285px;
+                height: 55px;
+                font-family: inherit;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+    } 
+    
+    .footer {
+        height: 100px;
+    
+        &__text {
             font-size: 16px;
             line-height: 20px;
-            padding-bottom: 32px;
-            text-align: center;
-        }
-
-        &__btn {
-            font-size: 16px;
-            line-height: 141.69%;
+            padding-top: 40px;
         }
     }
-
-
 }
+
+ /*
+*/
