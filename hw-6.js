@@ -117,17 +117,17 @@ console.log(line);
 // Подсказка
 // Используйте оператор spread для объединения массивов.
 
-const arrays = [[1, 2, 3],[4, 5, 6]];
-const newArrays = [];
-for (let i = 0; i < arrays.length; i++) {
-    newArrays.push(...arrays[i]);   
-}
-console.log(newArrays);
+// const arrays = [[1, 2, 3],[4, 5, 6]];
+// const newArrays = [];
+// for (let i = 0; i < arrays.length; i++) {
+//     newArrays.push(...arrays[i]);   
+// }
+// console.log(newArrays);
 
 // или
 
-// const arrays = [[1, 2, 3],[4, 5, 6]];
-// console.log(arrays.flat());
+const arrays = [[1, 2, 3],[4, 5, 6]];
+console.log(arrays.flat());
 
 // Задание 10
 // 1.Создайте массив с произвольными числами (диапазон от 1 до 10).
@@ -258,51 +258,36 @@ console.log('среднее арифметическое 6 случайных ч
 // -Результат работы загружен на GitHub и отправлена ссылка на pull request.
 
 
-// simpleArithmetic()
-// // Функция для генерации случайной арифметической задачи
-// function generateQuestion() {
-//     const operators = ['+', '-', '*', '/'];
-//     const num1 = Math.floor(Math.random() * 10) + 1; // Случайное число от 1 до 10
-//     const num2 = Math.floor(Math.random() * 10) + 1; // Случайное число от 1 до 10
-//     const operator = operators[Math.floor(Math.random() * operators.length)];
+const operators = ['+', '-', '*', '/'];
+let randomTask;
+let correctAnswer;
 
-//     return { question: `${num1} ${operator} ${num2}`, operator, num1, num2 };
-// }
+function simpleArithmetic() {
+    const operators = ['+', '-', '*', '/'];
+    const num1 = Math.floor(Math.random() * 10) + 1; 
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    const operator = operators[Math.floor(Math.random() * operators.length)];
+    let randomTask = `${num1} ${operator} ${num2}`; 
+    const userAnswer = Number(prompt(`Решите задачу: ${randomTask}`));
+    
+    switch (operator) {
+        case '+':
+            correctAnswer = num1 + num2;
+            break;
+        case '-':
+            correctAnswer = num1 - num2;
+            break;
+        case '*':
+            correctAnswer = num1 * num2;
+            break;
+        case '/':
+            correctAnswer = num1 / num2;
+            break;
+    }
 
-// // Функция для проверки ответа
-// function checkAnswer(question, userAnswer) {
-//     const { operator, num1, num2 } = question;
-//     let correctAnswer;
-
-//     switch (operator) {
-//         case '+':
-//             correctAnswer = num1 + num2;
-//             break;
-//         case '-':
-//             correctAnswer = num1 - num2;
-//             break;
-//         case '*':
-//             correctAnswer = num1 * num2;
-//             break;
-//         case '/':
-//             correctAnswer = (num1 / num2).toFixed(2); // Округляем до 2 знаков после запятой
-//             break;
-//     }
-
-//     return parseFloat(userAnswer) === parseFloat(correctAnswer);
-// }
-
-// // Основная функция игры
-// function startGame() {
-//     const question = generateQuestion();
-//     const userAnswer = prompt(`Решите задачу: ${question.question}`);
-
-//     if (checkAnswer(question, userAnswer)) {
-//         alert('Верно! Молодец!');
-//     } else {
-//         alert(`Неверно. Правильный ответ: ${eval(question.question)}`);
-//     }
-// }
-
-// // Запускаем игру
-// startGame();
+    if (userAnswer === correctAnswer) {
+        alert('Поздравляем!!! Правильный ответ!');
+    } else {
+        alert('Ответ неправильный. Попробуйте снова!');
+    }
+}
