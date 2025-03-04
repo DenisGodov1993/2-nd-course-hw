@@ -24,13 +24,6 @@ a {
     background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), 100% 0;
 }
 
-.animation {
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(50px);
-    background: rgb(188, 236, 48);
-}
-
 .header {
     padding-top: 196px;
 
@@ -76,6 +69,15 @@ a {
 .header-mob {
     display: none;
 }
+
+.animation {
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    background: rgb(188, 236, 48);
+}
+
+/*конец 1 блока*/
 
 .games-box {
     height: 1470px;
@@ -173,7 +175,9 @@ a {
     }
 }
 
-.product-box {
+ /* Конец 2 блока*/
+
+.mini-games-box {
     height: 3500px;
     background: rgb(32, 32, 39);
     background-image: url(img/star6.svg), url(img/star7.svg), url(img/star8.svg), url(img/star9.svg);
@@ -203,11 +207,14 @@ a {
     background: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
+  
+    &__text-box {
+        padding: 48px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__text {
-        margin: 48px;
-        border-radius: 30px;
-        width: 600px;
 
         &_1 {
             color: rgb(32, 32, 39);
@@ -253,6 +260,12 @@ a {
         border-radius: 30px;
     }
 }
+
+.mini-games-mob {
+    display: none;
+} 
+
+ /* Конец 3 блока */
   
 .footer {
     height: 150px;
@@ -271,4 +284,5 @@ a {
 @import 'mobile';
 
  /*
+    
 */
