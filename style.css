@@ -73,6 +73,7 @@ a {
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   background: rgb(188, 236, 48);
+  overflow: hidden;
 }
 
 /*конец 1 блока*/
