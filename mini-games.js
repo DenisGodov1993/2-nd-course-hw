@@ -127,10 +127,31 @@ function simpleArithmetic() {
 // - Сайт запрашивает у пользователя текст, переворачивает его и выводит результат.
 // - Результат работы загружен на GitHub и отправлена ссылка на pull request.
 
+// Критерии оценки
+// Работа будет оценена по следующим критериям:
+// - Связь с сайтом для третьей и четвертой игр реализована. 
+// - Игра «Переверни текст» и «Викторина» работают корректно.
+// - Результат работы загружен на GitHub и отправлена ссылка на pull request.
 
+// Игра «Переверни текст»:
+// - Сайт запрашивает у пользователя текст, переворачивает его и выводит результат.
+// - Результат работы загружен на GitHub и отправлена ссылка на pull request.
 
+function turnTheTextOver() {
+    
+    function reverseString(str) {
+        return str.split('').reverse().join('');
+    }
+    
+    const userInput = prompt('Пожалуйста, введите текст, который Вы хотите перевернуть:');
+    const reversedText =  reverseString(userInput);
 
-
+    if (userInput !== null) {
+        alert(`Перевернутый текст: ${reversedText}`);
+    } else {
+        alert('Вы не ввели текст. Попробуйте снова.');
+    }   
+}
 
 // ИГРА № 4:
 // Игра «Викторина»
@@ -184,6 +205,36 @@ function simpleArithmetic() {
 // подсчитывается и выводится.
 // - Результат работы загружен на GitHub и отправлена ссылка на pull request.
 
+function quizGame() {
 
+    const quiz = [
+        {
+            question: "Какой цвет неба?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2 
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
 
+    let score = 0;
 
+    for (let i = 0; i < quiz.length; i++) {
+        const question = quiz[i].question;
+        const options = quiz[i].options.join("\n");
+        const userAnswer = prompt(`${question}\n${options}`);
+        
+        if (parseInt(userAnswer) === quiz[i].correctAnswer) {
+            score++; 
+        }
+    }
+    alert(`Вы ответили правильно на ${score} из ${quiz.length} вопросов.`);
+}
