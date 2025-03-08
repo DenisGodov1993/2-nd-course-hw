@@ -29,10 +29,16 @@
 // если первый элемент должен быть перед вторым, и значение > 0, 
 // если второй элемент должен быть перед первым.
 
+const people = [
+   { name: 'Глеб', age: 29 },
+   { name: 'Анна', age: 17 },
+   { name: 'Олег', age: 7 },
+   { name: 'Оксана', age: 47 }
+];
 
+const sortAge = (a, b) => a.age - b.age;
 
-
-
+console.log(people.sort(sortAge)); // или console.log(people.sort((a, b) => a.age - b.age));
 
 // Задание 2
 // Реализуйте функцию filter, которая должна работать аналогично методу массива filter. 
@@ -73,11 +79,32 @@
 // или false для каждого элемента), а возвращать — новый массив, который содержит только 
 // те элементы, для которых функция-правило возвращает true.
 
+function isPositive(num) {
+    return num > 0;
+}
+function isMale(person) {
+    return person.gender === 'male'; 
+}
+function filter(array, ruleFunction) {
+    const result = []; 
+    for (let i = 0; i < array.length; i++) {
+        if (ruleFunction(array[i])) { 
+            result.push(array[i]);
+        }
+    }
+    return result; 
+}
 
+console.log(filter([3, -4, 1, 9], isPositive));
 
+const peoples = [
+   {name: 'Глеб', gender: 'male'},
+   {name: 'Анна', gender: 'female'},
+   {name: 'Олег', gender: 'male'},
+   {name: 'Оксана', gender: 'female'}
+];
 
-
-
+console.log(filter(peoples, isMale));
 
 // Задание 3
 // Напишите программу, которая на протяжении 30 секунд каждые 3 секунды будет выводить 
@@ -93,10 +120,17 @@
 // Используйте setInterval для повторяющихся задач и setTimeout для отложенного выполнения. 
 // Не забудьте очистить интервал после его выполнения.
 
+function CurrentDate() {
+    const now = new Date();
+    console.log(now);
+}
 
+const intervalId = setInterval(CurrentDate, 3000);
 
-
-
+setTimeout(() => {
+    clearInterval(intervalId);
+    console.log("30 секунд прошло");
+}, 30000);
 
 // Задание 4
 // Сейчас код ниже выводит в консоль «Привет, Глеб!» сразу после запуска.
@@ -118,11 +152,13 @@
 // на 1 секунду с использованием setTimeout.
 // - Результат работы загружен на GitHub и отправлена ссылка на pull request.
 
+function delayForSecond(callback) {
+    setTimeout (callback, 1000);
+}
 
-
-
-
-
+delayForSecond(function () {
+   console.log('Привет, Глеб!');
+})
 
 // Задание 5
 // Посмотрите код. В нём допущена ошибка, и он выводит сообщения не в том порядке:
@@ -159,12 +195,24 @@
 // Каким образом можно передать аргумент в функцию sayHi, 
 // если вызывать ее нужно уже внутри delayForSecond?
 
+// Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if (cb) { cb(); }
+    }, 1000)
+}
 
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
 
+// Код выше менять нельзя
 
-
-
-
+// Нужно изменить код ниже:
+delayForSecond(() => sayHi('Глеб'));
 
 
 // Основное задание по верстке макета
@@ -210,3 +258,31 @@
 // - Выборы пользователя и компьютера, а также результат игры 
 // (победа, поражение или ничья) корректно выводятся.
 // - Результат работы загружен на GitHub и отправлена ссылка на pull request.
+
+function rockScissorsPaper() {
+   
+    const userChoice = prompt("Камень, ножницы или бумага?").toLowerCase();
+    const choices = ["камень", "ножницы", "бумага"];
+
+    if (!choices.includes(userChoice)) {
+        alert("Неправильный выбор! Попробуйте снова.");
+        return rockScissorsPaper(); 
+    }
+
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    let result;
+    if (userChoice === computerChoice) {
+        result = "Ничья!";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Вы проиграли!";
+    }
+
+    alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\nРезультат: ${result}`);
+}
