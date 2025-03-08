@@ -283,5 +283,31 @@ function quizGame() {
 // (победа, поражение или ничья) корректно выводятся.
 // - Результат работы загружен на GitHub и отправлена ссылка на pull request.
 
+function rockScissorsPaper() {
+   
+    const userChoice = prompt("Камень, ножницы или бумага?").toLowerCase();
+    const choices = ["камень", "ножницы", "бумага"];
 
+    if (!choices.includes(userChoice)) {
+        alert("Неправильный выбор! Попробуйте снова.");
+        return rockScissorsPaper(); 
+    }
+
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    let result;
+    if (userChoice === computerChoice) {
+        result = "Ничья!";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Вы проиграли!";
+    }
+
+    alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\nРезультат: ${result}`);
+}
 
