@@ -23,5 +23,8 @@ const textEl = document.querySelector('.text');
 
 btnEl.addEventListener('click', function () {
     const descriptionEl = document.querySelector('.description');
-    descriptionEl.remove()
+
+    if (descriptionEl) {
+        descriptionEl.remove();
+    }
 });
