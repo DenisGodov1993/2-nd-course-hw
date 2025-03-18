@@ -1,3 +1,60 @@
+// Важно, чтобы при нажатии на карточку в блоке «Об играх» происходил 
+// плавный скролл к соответствующей игре ниже на странице.
+
+const gameLinks = document.querySelectorAll('.about__game');
+
+gameLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// ИГРА № 6:
+// Генератор случайных цветов
+// Описание: При каждом клике на кнопку фон страницы меняется на случайный цвет.
+
+// Требования: Создайте кнопку, которая при нажатии меняет цвет фона 
+// (или другого элемента) на случайный.
+
+//     document.getElementById('colorButton').addEventListener('click', function() {
+//     // Генерация случайного цвета в формате HEX
+//     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    
+//     // Изменение цвета фона на случайный цвет
+//     document.body.style.backgroundColor = randomColor;
+// });
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+function changeBackgroundColor() {
+    const randomColor = getRandomColor();
+    const section = document.getElementById('colorSection');
+    section.style.backgroundColor = randomColor; 
+}
+
+const button = document.getElementById('colorButton');
+button.addEventListener('click', changeBackgroundColor); 
+
+// function generateRandomColor() {
+//     const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+//     return randomColor;
+// }
+
 // // ИГРА № 1:
 // // Описание игры для сайта («Угадай число»)
 // // Создайте игру, в которой пользователь пытается угадать случайное число от 1 до 100.
@@ -310,4 +367,3 @@ function rockScissorsPaper() {
 
     alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\nРезультат: ${result}`);
 }
-

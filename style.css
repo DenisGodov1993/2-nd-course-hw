@@ -17,6 +17,10 @@ a {
   padding-right: calc(50% - 600px);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .top {
   height: 800px;
   background: rgb(225, 255, 143);
@@ -67,13 +71,45 @@ a {
   display: none;
 }
 
-.animation {
+.animation-box {
+  max-width: 100%;
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   background: rgb(188, 236, 48);
   overflow: hidden;
+  position: relative;
+}
+
+.animated-games-title {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  animation: scrollLeft 30s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animated-games-title__text {
+  padding: 27px 49px;
+  color: rgb(32, 32, 39);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.animated-games-title__star {
+  padding-left: 51px;
+  padding-right: 51px;
 }
 
 /*конец 1 блока*/
