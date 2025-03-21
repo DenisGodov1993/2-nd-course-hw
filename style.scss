@@ -114,6 +114,10 @@ html {
     padding-right: 51px; 
 }
 
+.animated-games-title__star-mobile {
+    display: none;
+}
+
 /*конец 1 блока*/
 
 .games-box {
@@ -298,6 +302,10 @@ html {
     }
 }
 
+.mini-games-tab {
+    display: none;
+} 
+
 .mini-games-mob {
     display: none;
 } 
@@ -318,6 +326,7 @@ html {
     }
 }
 
+@import 'tablet';
 @import 'mobile';
 
  /*

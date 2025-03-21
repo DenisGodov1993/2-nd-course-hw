@@ -19,6 +19,24 @@ gameLinks.forEach(link => {
     });
 });
 
+const gameLinksTab = document.querySelectorAll('.about__game');
+
+gameLinksTab.forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const targetId = this.getAttribute('hrefTab');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
 // ИГРА № 1:
 // Описание игры для сайта («Угадай число»)
 // Создайте игру, в которой пользователь пытается угадать случайное число от 1 до 100.
