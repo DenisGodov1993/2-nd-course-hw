@@ -1,0 +1,154 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+    .center {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .header {
+        padding-top: 150px;
+
+        &__title {
+            font-size: 48px;
+            line-height: 60px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        &__btn {
+            width: 200px;
+            height: 56px;
+            font-size: 20px;
+        }
+    }
+    // конец 1 блока
+
+    .games-box {
+        height: auto;
+    }
+
+    .text-box {
+        &__title {
+            font-size: 48px;
+            line-height: 60px;
+            padding-top: 78px;
+            padding-bottom: 16px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 28px;
+            padding-bottom: 64px;
+        }
+    }
+
+    .game-text {
+        margin: 32px 32px 36px;
+    
+        &__2 {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    // конец 2 блока
+
+    .mini-games-box {
+        height: 100%;
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .text-mini-games {    
+        font-size: 48px;
+        line-height: 60px;
+        padding-bottom: 64px;
+    }
+
+    .mini-games {
+        display: none;
+    } 
+
+    .mini-games-mob {
+        display: none;
+    } 
+
+    .mini-games-tab {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+    }
+
+    .mini-game-tab {
+        grid-column: span 4;
+        border-radius: 30px;
+        box-shadow: 0px 11.44px 38.34px -6.87px rgba(0, 0, 0, 0.13);
+        background: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+
+        &__img {
+            border-radius: 30px;
+        }
+
+        &__text-box {
+            padding: 32px 32px 36px 32px;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 30px;
+        }
+    
+        &__text {
+    
+            &_1 {
+                color: rgb(32, 32, 39);
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 48px;
+                padding-bottom: 16px;
+            }
+    
+            &_2 {
+                color: rgb(0, 0, 0);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                padding-bottom: 32px;
+            }
+    
+            &_btn {
+                box-sizing: border-box;
+                border: 1px solid rgb(32, 32, 39);
+                border-radius: 60px;
+                background: rgb(32, 32, 39);
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 141.69%;
+                text-align: center;
+                width: 285px;
+                height: 55px;
+                font-family: inherit;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+    } 
+
+    // конец 3 блока
+    
+    .footer {
+        height: 125px;
+        
+        &__text {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    // конец 4 блока
+}

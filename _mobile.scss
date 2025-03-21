@@ -58,13 +58,34 @@
         }
     }
 
+    .animation-box {
+        border: 0.54px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(26.86px);
+    }
+    
+    .animated-games-title__text {
+        padding: 27px 27px;
+        font-size: 16px;
+    }
+
+    .animated-games-title__star-mobile {
+        display: block;
+    }
+
+    .animated-games-title__star {
+        display: none;
+    }
+
     .games-box {
         display: none;
     }
 
+    // конец 1 и 2 блока
+
     .mini-games-box {
-        height: 3740px;
+        height: 100%;
         padding-top: 48px;
+        padding-bottom: 48px;
     }
 
     .text-mini-games {    
@@ -130,7 +151,7 @@
                 font-weight: 600;
                 line-height: 141.69%;
                 text-align: center;
-                width: 285px;
+                max-width: 285px;
                 height: 55px;
                 font-family: inherit;
                 display: flex;
@@ -141,6 +162,8 @@
         }
     } 
     
+    // конец 3 блока
+
     .footer {
         height: 100px;
     
@@ -150,7 +173,6 @@
             padding-top: 40px;
         }
     }
-}
 
- /*
-*/
+    // конец 4 блока
+}
